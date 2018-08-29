@@ -56,9 +56,7 @@ public class CronSpammerServlet extends HttpServlet
       {
       Twitter bacon;
       IDs ids;
-
       StringBuilder tweet = new StringBuilder();
-      
       PrintWriter out = response.getWriter();
       
       response.setContentType("text/html; charset=UTF-8");
@@ -126,7 +124,6 @@ public class CronSpammerServlet extends HttpServlet
             
             //Get a trend using a WOEID from the list (change this list to match language of your tweet)
             int[] woeids = new int[] { 3444, 580778, 615702, 610264, 23424819 };
-            out.println("WOEID IS " + woeids[r.nextInt(woeids.length)]);
             Trends t = bacon.getPlaceTrends(woeids[r.nextInt(woeids.length)]);
             tweet.append(" ").append(t.getTrends()[r.nextInt(t.getTrends().length)].getName());
             
@@ -156,8 +153,8 @@ public class CronSpammerServlet extends HttpServlet
       catch (EntityNotFoundException e) 
          {
          out.println("Error finding Datastore Entities!");
-            out.println("<br />"); 
-            e.printStackTrace(response.getWriter()); 
+         out.println("<br />"); 
+         e.printStackTrace(response.getWriter()); 
          }
       catch(Exception e)
          {
