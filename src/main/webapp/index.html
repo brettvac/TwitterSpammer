@@ -2,21 +2,47 @@
      PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <title>Twitter Auto Promo</title>
-  </head>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>TwitterSpammer</title>
+<style>
+h1.intro 
+   {
+   color: blue;
+   }
+input.long 
+   {
+   width: 300px;
+   }
+input.longest 
+   {
+   width: 600px;
+   }
 
-  <body>
-    <h1>Twitter Auto Promo - promote on Twitter</h1>
-  
-    <table>
-      <tr>
-        <td colspan="2" style="font-weight:bold;">Available Servlets:</td>        
-      </tr>
-      <tr>
-        <td><a href='/cron/twitterautopromoServlet'>Twitter auto promo servlet</a></td>
-      </tr>
-    </table>
-  </body>
+</style>
+</head>
+
+<body>
+  <h1 class="intro">Twitter Spammer</h1>
+  <p>Welcome to Twitter Spammer. Here we will set some options for spamming.</p>
+  <h2>Input form</h2>  
+  <form method="get" action="TwitterSpammerServlet">
+    <fieldset>
+      <legend>Twitter OAuth parameters</legend>
+          OAuth ConsumerKey: <input type="text" name="OAuthConsumerKey" class="long"/><br /><br />
+          OAuth ConsumerSecret: <input type="text" name="OAuthConsumerSecret" class="longest"/><br /><br />
+          OAuth AccessToken: <input type="text" name="OAuthAccessToken" class="longest"/><br /><br />
+          OAuth AccessTokenSecret: <input type="text" name="OAuthAccessTokenSecret" class="longest" /><br /><br />
+     </fieldset>
+     <br /><br />
+     <fieldset>
+      <legend>Spamming options</legend>
+         Twitter host with lots of followers: @<input type="text" name="host" value="barackobama" class="long" /><br /><br />
+         Spamming message: <input type="text" name="message" value="Hello from TwitterSpammer!" class="longest"  /><br /><br />
+         Number of messages at a time (1-6): <input type="range" name="frequency" min="1" max="6"><br /><br />
+     </fieldset>
+  <input type="submit" value="Submit">
+  </form>  
+ 
+</body>
 </html>

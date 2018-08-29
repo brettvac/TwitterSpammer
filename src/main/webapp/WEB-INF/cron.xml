@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cronentries>
   <cron>
-    <url>/cron/twitterautopromoServlet</url>
-    <description>Twitter post to 5 followers every 15 minutes</description>
-    <schedule>every 15 minutes from 9:03 to 20:12</schedule>
+    <url>/cron/CronSpammerServlet</url>
+    <description>Twitter post to followers every 15 minutes</description>
+    <schedule>every 5 hours from 11:12 to 17:12</schedule>
     <timezone>America/New_York</timezone>
   </cron>
 </cronentries>

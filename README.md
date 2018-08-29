@@ -1,10 +1,10 @@
-twitter-auto-promo
-========
+# Twitter Spammer
+## A bot running on GAE that spams Twits
 
-This is a bot that messages users of a follower a message of your choice. It can be used to promote a website, send a message, etc.
+This is a bot that messages followers of a follower a message of your choice. Choose a Twitter user that has lots of followers to spam, or just use the default.
 
-It is set to send five tweets at a time but you can change this in the count value. 
+This bot runs under Google App Engine. It can be used to promote a website, send a spam message, etc.
 
-This bot runs under Google App Engine.
+This bot can send between 1 and 6 tweets at a time. This bot will run only once a day as per the cron.xml file, but you can change this to whatever value you would like.
 
-**WARNING** Be aware that some features of this bot violate Twitter's Terms and Conditions, found at https://support.twitter.com/articles/76915. Your Twitter account may be suspended if you run this bot. The provided cron.xml file has servlet run times that mimic a regular user in order to circumvent Twitter's automatic bot detection software
+Be aware that this bot violates Twitter's automation rules: https://help.twitter.com/en/rules-and-policies/twitter-automation
